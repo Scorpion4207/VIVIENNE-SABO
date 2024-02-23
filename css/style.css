@@ -124,7 +124,7 @@ address {
 .instructions__item {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 12px;
+  font-size: 20px;
   color: var(--general-text);
 }
 
@@ -199,17 +199,12 @@ address {
       -ms-flex-align: center;
           align-items: center;
   padding: 24px 0;
-  z-index: 3;
+  z-index: 10;
 }
 .header__logo img {
   max-width: 220px;
   -webkit-transition: var(--transition);
   transition: var(--transition);
-}
-.header__logo:hover img {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
 }
 .header__nav-list {
   display: -webkit-box;
@@ -219,9 +214,6 @@ address {
 }
 .header__nav-item:hover {
   color: var(--bg-text);
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .burger-icon {
@@ -283,7 +275,7 @@ address {
 
 /*========================================================*/
 .hero {
-  z-index: -1;
+  position: relative;
 }
 
 .hero__inner {
@@ -294,18 +286,16 @@ address {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 1088px;
+  min-height: 1450px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  background-image: url(../img/hero.png);
   background-position: 50% 0%;
   background-repeat: no-repeat;
   background-size: 1024px;
-  z-index: 1;
 }
 
 .hero__inner img {
@@ -321,20 +311,34 @@ address {
   color: #b8a46f;
   max-width: 550px;
   padding: 0 40px 43px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .button {
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  z-index: 1;
+  z-index: 3;
 }
 
 .button:hover {
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  background: transparent;
-  color: var(--bg-text);
+  opacity: 0.8;
+}
+
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -5;
+}
+
+.hero__video video {
+  width: 100%;
+  height: 1500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*========================================================*/
@@ -409,7 +413,7 @@ address {
   border: 0.5px solid #b39d63;
   background: transparent;
   border-radius: 71px;
-  width: 366px;
+  width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,10 +463,8 @@ address {
 }
 .footer__item:hover {
   color: var(--bg-text);
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
 }
+
 /*========================================================*/
 /*======================Адаптив===========================*/
 /*========================================================*/
@@ -544,18 +546,28 @@ address {
   }
 }
 @media (max-width: 700px) {
+  .hero__inner {
+    min-height: 1150px;
+  }
   .hero__inner img {
     width: 400px;
   }
   .hero__text {
     font-size: 16px;
   }
+  .hero__video video {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .instructions__item {
+    font-size: 12px;
+  }
 }
 @media (max-width: 450px) {
   .hero__inner {
-    background-image: url(../img/hero-mobile.jpg);
-    background-size: 100%;
-    min-height: 700px;
+    min-height: 750px;
   }
   .hero__inner img {
     width: auto;
@@ -599,6 +611,7 @@ address {
             align-items: center;
     padding: 30px 30px;
     text-align: center;
+    font-size: 12px;
     position: relative;
   }
   .footer__inner {

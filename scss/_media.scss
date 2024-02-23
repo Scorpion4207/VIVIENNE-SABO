@@ -63,6 +63,9 @@
 }
 @media (max-width: 700px) {
   .hero{
+    &__inner  {
+      min-height: 1150px;
+    }
     &__inner img {
       width: 400px;
     }
@@ -70,14 +73,31 @@
       font-size: 16px;
     }
   }
+  .hero__video video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .instructions__item {
+    border: 0.50px solid #b39d63;
+    background: transparent;
+    border-radius: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %instructions-text;
+    padding: 30px 30px;
+    text-align: center;
+        font-size: 12px;
+    position: relative;
+  }
  
 }
 @media (max-width: 450px) {
   .hero{
-    &__inner {
-      background-image: url(../img/hero-mobile.jpg);
-      background-size: 100%;
-      min-height: 700px;
+    &__inner  {
+      min-height:750px;
     }
     &__inner img {
       width: auto;
@@ -107,20 +127,20 @@
     height: 300px;
     z-index: -1;
     opacity: .4;
+
   }
 
   .instructions__item {
     border: 0.50px solid #b39d63;
     background: transparent;
     border-radius: 71px;
-    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     @extend %instructions-text;
     padding: 30px 30px;
     text-align: center;
-  
+        font-size: 12px;
     position: relative;
   }
 

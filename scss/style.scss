@@ -47,7 +47,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px 0;
-    z-index: 3;
+    z-index: 10;
   }
 
   &__logo img {
@@ -55,9 +55,7 @@
     transition: var(--transition);
   }
 
-  &__logo:hover img {
-    transform: scale(1.2);
-  }
+
 
   &__nav-list {
     display: flex;
@@ -70,7 +68,6 @@
 
   &__nav-item:hover {
     color: var(--bg-text);
-    transform: scale(1.1);
   }
 }
 
@@ -129,20 +126,18 @@
 /*========================================================*/
 
 .hero {
-  z-index: -1;
+  position: relative;
 }
 
 .hero__inner {
   display: flex;
   flex-direction: column;
-  min-height: 1088px;
+  min-height: 1450px;
   align-items: center;
   justify-content: end;
-  background-image: url(../img/hero.png);
   background-position: 50% 0%;
   background-repeat: no-repeat;
   background-size: 1024px;
-  z-index: 1;
 }
 
 .hero__inner img {
@@ -158,20 +153,34 @@
   color: #b8a46f;
   max-width: 550px;
   padding: 0 40px 43px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .button {
   @extend %button;
   transition: var(--transition);
-  z-index: 1;
+  z-index: 3;
 }
 
 .button:hover {
   transition: var(--transition);
-  background: transparent;
-  color: var(--bg-text);
+  opacity: 0.8;
 
+}
+
+
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -5;
+}
+
+.hero__video video {
+  width: 100%;
+  height: 1500px;
+  object-fit: cover;
 }
 
 /*========================================================*/
@@ -237,7 +246,8 @@
   border: 0.50px solid #b39d63;
   background: transparent;
   border-radius: 71px;
-  width: 366px;
+  max-width: 500px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,24 +282,15 @@
     display: flex;
     flex-direction: column; 
     text-align: center
-  } 
-  &__list {
-
-  }
-  
+  }  
   &__item {
     @extend %text-header;
     padding: 10px;
   }
-  
   &__item:hover {
     color: var(--bg-text);
-    transform: scale(1.1);
   }
 
-  &__link {
-    
-  }
 }
 
 
