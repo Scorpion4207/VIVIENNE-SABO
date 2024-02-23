@@ -276,6 +276,7 @@ address {
 /*========================================================*/
 .hero {
   position: relative;
+  z-index: -10;
 }
 
 .hero__inner {
@@ -286,16 +287,20 @@ address {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 1450px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  background-position: 50% 0%;
-  background-repeat: no-repeat;
-  background-size: 1024px;
+  max-width: 565px;
+  margin: 0 auto;
+  background: linear-gradient(181deg, rgba(0, 0, 0, 0) 11.09%, #000 59.44%), linear-gradient(180deg, rgba(13, 13, 13, 0) 12.5%, rgba(13, 13, 13, 0) 23.51%, rgba(13, 13, 13, 0.81) 38.9%, #0d0d0d 43.76%, rgba(13, 13, 13, 0) 87.5%);
+  z-index: -10;
+  padding-top: 130px;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .hero__inner img {
@@ -336,15 +341,16 @@ address {
 
 .hero__video video {
   width: 100%;
-  height: 1500px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 1000px;
 }
 
 /*========================================================*/
 .instructions {
   position: relative;
   z-index: 0;
+  -webkit-transform: translateY(30%);
+      -ms-transform: translateY(30%);
+          transform: translateY(30%);
 }
 
 .instructions::before {
@@ -413,7 +419,8 @@ address {
   border: 0.5px solid #b39d63;
   background: transparent;
   border-radius: 71px;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,7 +455,7 @@ address {
   z-index: 2;
 }
 .footer__inner {
-  padding: 200px 0 100px;
+  padding: 500px 0 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,9 +553,6 @@ address {
   }
 }
 @media (max-width: 700px) {
-  .hero__inner {
-    min-height: 1150px;
-  }
   .hero__inner img {
     width: 400px;
   }
@@ -562,13 +566,25 @@ address {
        object-fit: contain;
   }
   .instructions__item {
+    border: 0.5px solid #b39d63;
+    background: transparent;
+    border-radius: 71px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px 30px;
+    text-align: center;
     font-size: 12px;
+    position: relative;
   }
 }
 @media (max-width: 450px) {
-  .hero__inner {
-    min-height: 750px;
-  }
   .hero__inner img {
     width: auto;
   }
@@ -599,7 +615,6 @@ address {
     border: 0.5px solid #b39d63;
     background: transparent;
     border-radius: 71px;
-    width: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -127,17 +127,20 @@
 
 .hero {
   position: relative;
+  z-index: -10;
 }
 
 .hero__inner {
   display: flex;
   flex-direction: column;
-  min-height: 1450px;
   align-items: center;
   justify-content: end;
-  background-position: 50% 0%;
-  background-repeat: no-repeat;
-  background-size: 1024px;
+  max-width: 565px;
+  margin: 0 auto;
+  background:linear-gradient(181deg, rgba(0, 0, 0, 0) 11.09%, #000 59.44%), linear-gradient(180deg, rgba(13, 13, 13, 0) 12.5%, rgba(13, 13, 13, 0) 23.51%, rgba(13, 13, 13, 0.81) 38.9%, #0d0d0d 43.76%, rgba(13, 13, 13, 0) 87.5%);
+  z-index: -10;
+  padding-top: 130px;
+  transform: translateY(100%);
 }
 
 .hero__inner img {
@@ -179,8 +182,7 @@
 
 .hero__video video {
   width: 100%;
-  height: 1500px;
-  object-fit: cover;
+  height: 1000px;
 }
 
 /*========================================================*/
@@ -188,6 +190,7 @@
 .instructions {
   position: relative;
   z-index: 0;
+  transform: translateY(30%);
 }
 
 .instructions::before {
@@ -277,8 +280,9 @@
 
 .footer {
   z-index: 2;
+
   &__inner {
-    padding: 200px 0 100px;
+    padding: 500px 0 100px;
     display: flex;
     flex-direction: column; 
     text-align: center

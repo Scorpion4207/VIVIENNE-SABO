@@ -63,9 +63,7 @@
 }
 @media (max-width: 700px) {
   .hero{
-    &__inner  {
-      min-height: 1150px;
-    }
+
     &__inner img {
       width: 400px;
     }
@@ -86,7 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @extend %instructions-text;
+
     padding: 30px 30px;
     text-align: center;
         font-size: 12px;
@@ -96,9 +94,6 @@
 }
 @media (max-width: 450px) {
   .hero{
-    &__inner  {
-      min-height:750px;
-    }
     &__inner img {
       width: auto;
     }
@@ -137,7 +132,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @extend %instructions-text;
+
     padding: 30px 30px;
     text-align: center;
         font-size: 12px;
