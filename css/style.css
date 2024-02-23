@@ -185,7 +185,7 @@ address {
   -webkit-backdrop-filter: blur(18.2999992371px);
           backdrop-filter: blur(18.2999992371px);
   background: rgba(0, 0, 0, 0.7490196078);
-  z-index: 3;
+  z-index: 10;
 }
 .header__inner {
   display: -webkit-box;
@@ -275,7 +275,7 @@ address {
 /*========================================================*/
 .hero {
   position: relative;
-  z-index: -10;
+  z-index: 0;
 }
 
 .hero__inner {
@@ -294,7 +294,7 @@ address {
           justify-content: end;
   margin: 0 auto;
   background: linear-gradient(181deg, rgba(0, 0, 0, 0) 11.09%, #000 59.44%), linear-gradient(180deg, rgba(13, 13, 13, 0) 12.5%, rgba(13, 13, 13, 0) 23.51%, rgba(13, 13, 13, 0.81) 38.9%, #0d0d0d 43.76%, rgba(13, 13, 13, 0) 87.5%);
-  z-index: -10;
+  z-index: 7;
   padding-top: 130px;
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
@@ -320,7 +320,7 @@ address {
 .button {
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  z-index: 3;
+  z-index: 10;
 }
 
 .button:hover {
@@ -346,9 +346,11 @@ address {
 .instructions {
   position: relative;
   z-index: 0;
-  -webkit-transform: translateY(30%);
-      -ms-transform: translateY(30%);
-          transform: translateY(30%);
+  -webkit-transform: translateY(22.74%);
+      -ms-transform: translateY(22.74%);
+          transform: translateY(22.74%);
+  background-color: #000000;
+  margin-top: 143px;
 }
 
 .instructions::before {
@@ -386,7 +388,7 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 185px;
+  padding-top: 185px;
 }
 
 .instructions__title {
@@ -450,7 +452,8 @@ address {
 
 /*========================================================*/
 .footer {
-  z-index: 2;
+  z-index: 1;
+  background-color: #000000;
 }
 .footer__inner {
   padding: 500px 0 100px;
@@ -462,6 +465,7 @@ address {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  z-index: 10;
 }
 .footer__item {
   padding: 10px;
