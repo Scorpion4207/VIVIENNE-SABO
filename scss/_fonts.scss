@@ -7,3 +7,23 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'PT Serif Caption';
+  src: local('PT Serif Caption'), local('PTSerif-Caption'),
+      url('../fonts/PTSerif-Caption.woff2') format('woff2'),
+      url('../fonts/PTSerif-Caption.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: local('PT Serif'), local('PTSerif-Regular'),
+      url('../fonts/PTSerif-Regular.woff2') format('woff2'),
+      url('../fonts/PTSerif-Regular.woff1') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

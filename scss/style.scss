@@ -23,6 +23,10 @@
   margin: 0 auto;
   padding: 0 15px;
   height: 100%;
+
+
+
+
   &__header {
     max-width: 1660px;
     margin: 0 auto;
@@ -31,7 +35,104 @@
   }
 }
 
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(18.299999237060547px);
+  background: #000000bf;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  &__logo img {
+    max-width: 220px;
+    transition: var(--transition);
+  }
+
+  &__logo:hover img {
+    transform: scale(1.2);
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 63px;
+  }
+
+  &__nav-item {
+    @extend %text-header;
+  }
+
+  &__nav-item:hover {
+    color: var(--bg-text);
+    transform: scale(1.1);
+  }
+}
+
+.burger-icon {
+  display: none;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  & span{
+    width: 32px;
+    height: 2px;
+    background: var(--burger-color);
+    transition: all .3s;
+  }
+  & span{
+    position: relative;
+  }
+  & span::before{
+    content: '';
+    position: absolute;
+    top: -8px;
+    width: 32px;
+    height: 2px;
+    background: var(--burger-color);
+    transition: all .3s;
+  }
+  & span::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    width: 32px;
+    height: 2px;
+    background: var(--burger-color);
+    transition: all .3s;
+  }
+}
+
+.body--opened-menu .burger-icon span {
+  background: transparent;
+}
+.body--opened-menu .burger-icon span::before{
+  transform: rotate(45deg);
+  top: 0;
+}
+.body--opened-menu .burger-icon span::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+
+
+
+
+
+.hero__inner {
+  display: flex;
+  justify-content: center
+}
+
+.hero__inner img {
+  max-width: 1023px;
+
+}
 
 /*========================================================*/
 /*======================Адаптив===========================*/
