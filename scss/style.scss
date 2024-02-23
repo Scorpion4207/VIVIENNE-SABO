@@ -78,16 +78,19 @@
   width: 35px;
   height: 35px;
   align-items: center;
-  & span{
+
+  & span {
     width: 32px;
     height: 2px;
     background: var(--burger-color);
     transition: all .3s;
   }
-  & span{
+
+  & span {
     position: relative;
   }
-  & span::before{
+
+  & span::before {
     content: '';
     position: absolute;
     top: -8px;
@@ -96,7 +99,8 @@
     background: var(--burger-color);
     transition: all .3s;
   }
-  & span::after{
+
+  & span::after {
     content: '';
     position: absolute;
     bottom: -8px;
@@ -110,29 +114,55 @@
 .body--opened-menu .burger-icon span {
   background: transparent;
 }
-.body--opened-menu .burger-icon span::before{
+
+.body--opened-menu .burger-icon span::before {
   transform: rotate(45deg);
   top: 0;
 }
+
 .body--opened-menu .burger-icon span::after {
   transform: rotate(-45deg);
   bottom: 0;
 }
 
-
-
-
-
-
 .hero__inner {
   display: flex;
-  justify-content: center
+  flex-direction: column;
+  min-height: 1088px;
+  align-items: center;
+  justify-content: end;
+  background-image: url(../img/hero.jpg);
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: 1024px;
 }
 
 .hero__inner img {
-  max-width: 1023px;
-
+  width: 600px;
 }
+
+.hero__text {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 22px;
+line-height: 90%;
+text-align: center;
+color: #b8a46f;
+max-width: 550px;
+padding: 0 40px 43px;
+}
+
+.button {
+  @extend %button;
+  transition: var(--transition);
+}
+.button:hover {
+  transition: var(--transition);
+  background: transparent;
+  color: var(--bg-text);
+}
+
+
 
 /*========================================================*/
 /*======================Адаптив===========================*/
