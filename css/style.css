@@ -112,7 +112,7 @@ address {
   --transition: all .5s;
 }
 
-.header__nav-item {
+.footer__item, .header__nav-item {
   -webkit-transition: var(--transition);
   transition: var(--transition);
   font-family: var(--font-family);
@@ -186,6 +186,7 @@ address {
   -webkit-backdrop-filter: blur(18.2999992371px);
           backdrop-filter: blur(18.2999992371px);
   background: rgba(0, 0, 0, 0.7490196078);
+  z-index: 3;
 }
 .header__inner {
   display: -webkit-box;
@@ -351,7 +352,7 @@ address {
   right: 0;
   height: 700px;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .instructions::after {
@@ -363,7 +364,7 @@ address {
   right: 0;
   height: 700px;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .instructions__inner {
@@ -438,6 +439,30 @@ address {
   padding: 0 10px;
 }
 
+/*========================================================*/
+.footer {
+  z-index: 2;
+}
+.footer__inner {
+  padding: 200px 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.footer__item {
+  padding: 10px;
+}
+.footer__item:hover {
+  color: var(--bg-text);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
 /*========================================================*/
 /*======================Адаптив===========================*/
 /*========================================================*/
@@ -516,5 +541,75 @@ address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media (max-width: 700px) {
+  .hero__inner img {
+    width: 400px;
+  }
+  .hero__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .hero__inner {
+    background-image: url(../img/hero-mobile.jpg);
+    background-size: 100%;
+    min-height: 700px;
+  }
+  .hero__inner img {
+    width: auto;
+  }
+  .hero__text {
+    font-size: 12px;
+  }
+  .instructions::before {
+    content: "";
+    background-image: url(../img/bg-mobile.png);
+    position: absolute;
+    top: -350px;
+    height: 300px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  .instructions::after {
+    content: "";
+    background-image: url(../img/bg-mobile.png);
+    position: absolute;
+    bottom: -300px;
+    left: 0;
+    right: 0;
+    height: 300px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  .instructions__item {
+    border: 0.5px solid #b39d63;
+    background: transparent;
+    border-radius: 71px;
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px 30px;
+    text-align: center;
+    position: relative;
+  }
+  .footer__inner {
+    padding: 80px 0 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
   }
 }

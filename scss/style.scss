@@ -40,6 +40,7 @@
   right: 0;
   backdrop-filter: blur(18.299999237060547px);
   background: #000000bf;
+  z-index: 3;
 
   &__inner {
     display: flex;
@@ -146,7 +147,6 @@
 
 .hero__inner img {
   width: 600px;
-
 }
 
 .hero__text {
@@ -190,8 +190,9 @@
   right: 0;
   height: 700px;
   z-index: -1;
-  opacity: .5;
+  opacity: .4;
 }
+
 .instructions::after {
   content: "";
   background-image: url(../img/bg.png);
@@ -201,7 +202,7 @@
   right: 0;
   height: 700px;
   z-index: -1;
-  opacity: .5;
+  opacity: .4;
 }
 
 
@@ -246,18 +247,49 @@
 
   position: relative;
 }
+
 .instructions__item:last-child {
   margin-bottom: 60px;
 }
-.instructions__item span{
+
+.instructions__item span {
   position: absolute;
   top: -25px;
   font-family: var(--second-family);
-font-weight: 400;
-font-size: 32px;
-color: var( --bg-text);
-background: var(--general-bg);
-padding: 0 10px;
+  font-weight: 400;
+  font-size: 32px;
+  color: var(--bg-text);
+  background: var(--general-bg);
+  padding: 0 10px;
+}
+
+/*========================================================*/
+
+.footer {
+  z-index: 2;
+  &__inner {
+    padding: 200px 0 100px;
+    display: flex;
+    flex-direction: column; 
+    text-align: center
+  } 
+  &__list {
+
+  }
+  
+  &__item {
+    @extend %text-header;
+    padding: 10px;
+  }
+  
+  &__item:hover {
+    color: var(--bg-text);
+    transform: scale(1.1);
+  }
+
+  &__link {
+    
+  }
 }
 
 
