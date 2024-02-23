@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>VIVIENNE SABO</title>
 </head>
-<body class="body ">
+
+<body class="body body-download">
   <div class="wrapper">
     <header class="header">
       <div class="container__header">
@@ -51,12 +53,24 @@
     </header>
     <main class="main">
 
-
+      <section class="main__download download">
+        <div class="container">
+          <div class="download__inner">
+            <h2 class="download__title">
+              Создание видео
+            </h2>
+            <div class="download__img">
+              <img src="img/Instruction.png" alt="">
+            </div>
+            <button class="button button-download">Загрузить фото</button>
+          </div>
+        </div>
+      </section>
 
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer__inner">
+        <div class="footer__inner footer__inner-download">
           <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="#">
@@ -78,7 +92,33 @@
       </div>
     </footer>
   </div>
-
+  <div class="modal">
+    <div class="modal__window">
+      <div class="modal__cancel">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="11.25" stroke="#E1D9E1" stroke-width="1.5" />
+          <path d="M6.75781 17.2433L12.0008 12.0003L17.2438 17.2433M17.2438 6.75732L11.9998 12.0003L6.75781 6.75732"
+            stroke="#E1D9E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <img src="img/decor/cupcakes-modal.png" alt="Капкейки" class="modal__img">
+      <h3 class="modal__title">
+        Удиви своих близких вкусными капкейками
+      </h3>
+      <p class="modal__text">
+        Оставь свой e-mail, и мы вышлем рецепт на почту
+      </p>
+      <form class="modal__form">
+        <label class="modal__form-label field">
+          <input type="email" placeholder="E-mail" class="field__input">
+          <span>Введите e-mail</span>
+        </label>
+        <button class="form__button button" type="submit" onclick="event.preventDefault()">
+          Получить подарок
+        </button>
+      </form>
+    </div>
+  </div>
 </body>
 <script src="js/main.js"></script>
 
