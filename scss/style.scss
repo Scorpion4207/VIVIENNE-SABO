@@ -1,3 +1,40 @@
-section {
-  color: aliceblue;
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "mixins";
+
+.body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+  color: var();
+  background: var(--general-bg);
 }
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1053px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+  &__header {
+    max-width: 1660px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+  }
+}
+
+
+
+/*========================================================*/
+/*======================Адаптив===========================*/
+/*========================================================*/
+
+@import "media";

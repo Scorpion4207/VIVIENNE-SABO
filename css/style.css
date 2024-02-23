@@ -1,3 +1,129 @@
-section {
-  color: aliceblue;
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chalet-LondonNineteenSixty";
+  src: local("Chalet LondonNineteenSixty"), local("Chalet-LondonNineteenSixty"), url("../fonts/Chalet-LondonNineteenSixty.woff2") format("woff2"), url("../fonts/Chalet-LondonNineteenSixty.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font-family: "Chalet-LondonNineteenSixty", sans-serif;
+  --second-family: "PT Serif", sans-serif;
+  --general-bg: #0d0d0d;
+}
+
+.body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+  color: var();
+  background: var(--general-bg);
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 1053px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+.container__header {
+  max-width: 1660px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+
+/*========================================================*/
+/*======================Адаптив===========================*/
+/*========================================================*/
