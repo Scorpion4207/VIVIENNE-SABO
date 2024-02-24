@@ -14,16 +14,16 @@
         }
     }
 
+    // ==================================Модалка 1============================
+
     document.addEventListener('click', modalInit)
     function modalInit(e) {
-        const modalOpen = e.target.closest('.button-download')
-        const modalClose = e.target.closest('.modal__cancel')
+        const modalOpen = e.target.closest('.button-upload-photo')         
         const modal = e.target.classList.contains('modal')
-        const buttonClose = e.target.closest('.form__button')
-        if (!modalClose && !modalOpen && !modal && !buttonClose) return
-        if (!document.body.classList.contains('body--modal-opened') && e.target.closest('.about__img-button')) {
+        if (!modalOpen && !modal) return
+        if (!document.body.classList.contains('body--modal-opened') && e.target.closest('.button-upload-photo')) {
             document.body.classList.add('body--modal-opened')
-        } else if (e.target && e.target.closest('.modal__cancel') || e.target.closest('.form__button') || e.target.classList.contains('modal') && document.body.classList.contains('body--modal-opened')) {
+        } else if (e.target && e.target.classList.contains('modal') && document.body.classList.contains('body--modal-opened')) {
             document.body.classList.remove('body--modal-opened')
         }
     }

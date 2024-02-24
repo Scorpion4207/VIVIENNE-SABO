@@ -8,23 +8,23 @@
   <title>VIVIENNE SABO</title>
 </head>
 
-<body class="body body-download">
+<body class="body">
   <div class="wrapper">
     <header class="header">
       <div class="container__header">
         <div class="header__inner">
-          <a class="header__logo" href="">
+          <a class="header__logo" href="/">
             <img src="img/logo.svg" alt="Лого">
           </a>
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#">
+                <a class="header__nav-link" href="index.html">
                   Главная
                 </a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="#">
+                <a class="header__nav-link" href="uploading_photos.html">
                   Создать видео
                 </a>
               </li>
@@ -62,7 +62,7 @@
             <div class="download__img">
               <img src="img/Instruction.png" alt="">
             </div>
-            <button class="button button-download">Загрузить фото</button>
+            <button class="button button-upload-photo">Загрузить фото</button>
           </div>
         </div>
       </section>
@@ -94,29 +94,28 @@
   </div>
   <div class="modal">
     <div class="modal__window">
-      <div class="modal__cancel">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="11.25" stroke="#E1D9E1" stroke-width="1.5" />
-          <path d="M6.75781 17.2433L12.0008 12.0003L17.2438 17.2433M17.2438 6.75732L11.9998 12.0003L6.75781 6.75732"
-            stroke="#E1D9E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-      <img src="img/decor/cupcakes-modal.png" alt="Капкейки" class="modal__img">
       <h3 class="modal__title">
-        Удиви своих близких вкусными капкейками
+        Требования к фото
       </h3>
-      <p class="modal__text">
-        Оставь свой e-mail, и мы вышлем рецепт на почту
-      </p>
-      <form class="modal__form">
-        <label class="modal__form-label field">
-          <input type="email" placeholder="E-mail" class="field__input">
-          <span>Введите e-mail</span>
-        </label>
-        <button class="form__button button" type="submit" onclick="event.preventDefault()">
-          Получить подарок
-        </button>
-      </form>
+      <div class="modal__body">
+        <div class="modal__body-img">
+          <img src="img/photo_selection.png" alt="Выбор фотографии">
+        </div>
+        <div class="modal__body-text">
+          <ul class="modal__body-list">
+            <li class="modal__body-item">
+              <img src="img/check.svg" alt="Чек бокс">Фото в фокусе
+            </li>
+            <li class="modal__body-item">
+              <img src="img/check.svg" alt="Чек бокс">Хорошее освещение 
+            </li>
+            <li class="modal__body-item">
+              <img src="img/check.svg" alt="Чек бокс">Открытое лицо
+            </li>
+          </ul>
+          <button class="button button-download">Загрузить</button>
+        </div>
+      </div>
     </div>
   </div>
 </body>
