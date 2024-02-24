@@ -726,6 +726,59 @@ input[type=file] {
   color: var(--button-text);
 }
 
+.progress-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.result-page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 20px;
+  background-color: #f1f1f1;
+  position: relative;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #4CAF50;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
 /*========================================================*/
 .footer {
   z-index: 0;

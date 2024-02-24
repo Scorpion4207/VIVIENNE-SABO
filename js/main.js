@@ -37,10 +37,12 @@
     const uploadBtn = document.querySelector('.upload-btn');
     const fileInput = document.getElementById('file-input');
     const progressModal = document.querySelector('.progress-modal');
+    const modal = document.querySelector('.modal');
     const progressBar = document.querySelector('.progress');
     
     uploadBtn.addEventListener('click', () => {
       fileInput.click();
+      modal.classList.add('hidden');
     });
     
     fileInput.addEventListener('change', () => {
@@ -51,12 +53,14 @@
     
         let progress = 0;
         const interval = setInterval(() => {
+            progressModal.classList.remove('hidden');
           progress += 20;
           progressBar.style.width = `${progress}%`;
     
           if (progress === 100) {
             clearInterval(interval);
-    
+            progressModal.classList.add('hidden');
+
             setTimeout(() => {
               window.location.href = "photo_ready.html";
             }, 2000); // Через 2 секунды переход на другую страницу
