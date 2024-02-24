@@ -20,7 +20,7 @@
     function modalInit(e) {
         const modalOpen = e.target.closest('.button-upload-photo')
         const modal = e.target.classList.contains('modal')
-        if (!modalOpen && !modal && !buttonClose) return
+        if (!modalOpen && !modal) return
         if (!document.body.classList.contains('body--modal-opened') && e.target.closest('.button-upload-photo')) {
             document.body.classList.add('body--modal-opened')
         } else if (e.target && e.target.classList.contains('modal') && document.body.classList.contains('body--modal-opened')) {

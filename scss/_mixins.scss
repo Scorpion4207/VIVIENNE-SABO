@@ -3,8 +3,7 @@
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
-  color: var(--header-text);
-  
+  color: var(--header-text); 
 }
 
 %general-text {
@@ -28,8 +27,21 @@ color: var(--general-text);
   border-radius: 38px;
   width: 250px;
   height: 53px;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(270deg, #8c602a 0%, #deae68 24.5%, #835925 48%, #e1b26e 73%, #bf9252 87.5%, #b18044 100%);
+}
+%button-contest{
+  border: 1px solid #b49d60;
+  color: var(--button-contest);
+  border-radius: 38px;
+  width: 250px;
+  height: 53px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
 }
