@@ -88,7 +88,7 @@
     </footer>
   </div>
   <div class="modal">
-    <div class="modal__window modal__window--close">
+    <div class="modal__window">
       <h3 class="modal__title">
         Требования к фото
       </h3>
@@ -168,46 +168,16 @@
               <p>Открытое лицо</p>
             </li>
           </ul>
-          <label class="button button-download" onclick="move()">
-            <input type="file" />
-            Загрузить
-          </label>
-          <script>
-            var i = 0;
-            function move() {
-              if (i == 0) {
-                i = 1;
-                var elem = document.getElementById("myBar");
-                var width = 10;
-                var id = setInterval(frame, 10);
-                function frame() {
-                  if (width >= 100) {
-                    clearInterval(id);
-                    i = 0;
-                  } else {
-                    width++;
-                    elem.style.width = width + "%";
-                  }
-                }
-              }
-            }
-          </script>
+          <button class="button-upload-btn upload-btn">Загрузить</button>
+          <input type="file" id="file-input" accept="image/*" style="display: none;">
         </div>
-      </div>
-    </div>
-    <div class="modal__window modal__window-progress">
-      <div class="modal__window-inner">
-        <h3 class="modal__title">
-          Ваше видео
-          в процессе создания
-        </h3>
-        <div id="myProgress">
-          <div id="myBar"></div>
-        </div>
-        <a href="index.html" class="button button-download--progress ">Готово</a>
       </div>
     </div>
   </div>
+  <div class="progress-modal hidden">
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
   </div>
 </body>
 <script src="js/main.js"></script>

@@ -124,6 +124,7 @@
 .button-download {
   max-width: 130px;
   height: 35px;
+  cursor: pointer;
 }
 
 
@@ -142,6 +143,9 @@
   align-items: center;
 }
 
+
+
+
 .button-download--progress {
   max-width: 130px;
   height: 35px;
@@ -156,17 +160,8 @@
   display: none;
 }
 
-#myProgress {
-  width: 100%;
-  background-color: var(--general-bg);
-  text-align: center;
-}
+.progress-modal {
 
-#myBar {
-  width: 1%;
-  height: 10px;
-  border-radius: 36px;
-  background: linear-gradient(270deg, #8c602a 0%, #deae68 24.5%, #835925 48%, #e1b26e 73%, #bf9252 87.5%, #b18044 100%);
 }
 
 /*========================================================================*/
@@ -305,6 +300,12 @@
   transition: var(--transition);
   opacity: 0.8;
 
+}
+
+.button-upload-btn {
+  @extend %button;
+  width: 120px;
+  height: 35px;
 }
 
 .button__contest {
@@ -451,6 +452,15 @@
   &__img {
     margin-bottom: 65px;
   }
+}
+
+.modal__body-img {
+  background: black;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.modal__body-img img{
+
 }
 
 .footer__inner.footer__inner-download {

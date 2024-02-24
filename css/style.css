@@ -129,7 +129,7 @@ address {
   color: var(--general-text);
 }
 
-.button {
+.button-upload-btn, .button {
   border: 1px solid #b49d60;
   color: var(--button-text);
   border-radius: 38px;
@@ -315,6 +315,7 @@ address {
 .button-download {
   max-width: 130px;
   height: 35px;
+  cursor: pointer;
 }
 
 .body--modal-opened .modal {
@@ -353,20 +354,6 @@ address {
 
 .body__modal__window .modal__window--close {
   display: none;
-}
-
-#myProgress {
-  width: 100%;
-  background-color: var(--general-bg);
-  text-align: center;
-}
-
-#myBar {
-  width: 1%;
-  height: 10px;
-  border-radius: 36px;
-  background: -webkit-gradient(linear, right top, left top, from(#8c602a), color-stop(24.5%, #deae68), color-stop(48%, #835925), color-stop(73%, #e1b26e), color-stop(87.5%, #bf9252), to(#b18044));
-  background: linear-gradient(270deg, #8c602a 0%, #deae68 24.5%, #835925 48%, #e1b26e 73%, #bf9252 87.5%, #b18044 100%);
 }
 
 /*========================================================================*/
@@ -519,6 +506,11 @@ address {
   -webkit-transition: var(--transition);
   transition: var(--transition);
   opacity: 0.8;
+}
+
+.button-upload-btn {
+  width: 120px;
+  height: 35px;
 }
 
 .button__contest {
@@ -680,6 +672,12 @@ address {
 }
 .download__img {
   margin-bottom: 65px;
+}
+
+.modal__body-img {
+  background: black;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
 .footer__inner.footer__inner-download {

@@ -34,20 +34,63 @@
         }
     }
 
-    document.addEventListener('click', modalwindow)
-    function modalwindow(e) {
-        const buttonClose = e.target.closest('.button-download')
-        const windowClose = e.target.closest('.modal__window--close')
-        const modal = e.target.classList.contains('modal')
-        if (!buttonClose && !modal) return
-        if (e.target && e.target.closest('.button-download')) {
-            document.body.classList.add('body__progress--open')   
-            document.body.classList.add('body__modal__window')   
-        }
-        if (e.target && e.target.classList.contains('modal')) {
-            document.body.classList.remove('body__progress--open')
-            document.body.classList.remove('body__modal__window')
-        }
+    const uploadBtn = document.querySelector('.upload-btn');
+    const fileInput = document.getElementById('file-input');
+    const progressModal = document.querySelector('.progress-modal');
+    const progressBar = document.querySelector('.progress');
+    
+    uploadBtn.addEventListener('click', () => {
+      fileInput.click();
+    });
+    
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+    
+      if (file) {
+        showProgressModal();
+    
+        let progress = 0;
+        const interval = setInterval(() => {
+          progress += 20;
+          progressBar.style.width = `${progress}%`;
+    
+          if (progress === 100) {
+            clearInterval(interval);
+    
+            setTimeout(() => {
+              window.location.href = "photo_ready.html";
+            }, 2000); // Через 2 секунды переход на другую страницу
+          }
+        }, 1000); // Промежуток между обновлениями прогресс-бара в миллисекундах
+      }
+    });
+    
+    
+    function showProgressModal() {
+      progressModal.classList.remove('hidden');
     }
+    
+
+
+
+
+    // document.addEventListener('click', modalViewing)
+    // function modalViewing(e) {
+    //     const modalOpen = e.target.closest('.button-viewing')
+    //     const modal = e.target.classList.contains('modal')
+    //     if (!modalOpen && !modal) return
+    //     if (!document.body.classList.contains('body--modal-opened') && e.target.closest('.button-viewing')) {
+    //         document.body.classList.add('body--modal-opened')
+    //     } else if (e.target && e.target.classList.contains('modal') && document.body.classList.contains('body--modal-opened')) {
+    //         document.body.classList.remove('body--modal-opened')
+    //     }
+    // }
+    // document.addEventListener('keydown', modalClose)
+    // function modalClose(e) {
+    //     if (e.code === 'Escape' && document.body.classList.contains('body--modal-opened')) {
+    //         document.body.classList.remove('body--modal-opened')
+    //     }
+    // }
+
 
 })()
