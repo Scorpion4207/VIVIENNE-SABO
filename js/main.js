@@ -42,12 +42,12 @@
     
     uploadBtn.addEventListener('click', () => {
       fileInput.click();
-      modal.classList.add('hidden');
+      
     });
     
     fileInput.addEventListener('change', () => {
       const file = fileInput.files[0];
-    
+      modal.classList.add('hidden');
       if (file) {
         showProgressModal();
     
