@@ -26,9 +26,11 @@
   opacity: 1;
   overflow: hidden;
 }
+
 .container {
   margin: 0 auto;
   height: 100%;
+
   &__header {
     max-width: 1660px;
     margin: 0 auto;
@@ -37,7 +39,7 @@
   }
 }
 
-/*========================================================================*/ 
+/*========================================================================*/
 
 .modal {
   position: fixed;
@@ -56,35 +58,75 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    border-radius: 20px;
-    padding: 45px 123px;
+    border-radius: 24px;
+    padding: 50px 34px 75px;
+    max-width: 380px;
     margin: 0 15px 0;
-    position: relative;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
-
+  &__window::before {
+    content: '';
+    background-image: url(../img/bg-mobile.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .3;
+    z-index: -1;
+  }
 
   &__title {
+    font-family: var(--second-family);
     font-weight: 400;
-    margin-bottom: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #b8a46f;
+    margin-bottom: 50px;
   }
 
-  &__item {
-    margin-bottom: 40px;
+  &__body {
+    display: flex;
+    gap: 27px;
   }
 
-  &__link {
-    background: transparent;
-    transition: all .5s;
+
+  &__body-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  &__link:hover {
-    font-size: 25px;
+  &__body-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  &__body-item {
+    @extend %text-header;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__body-item p {
+    transform: translateY(-3px);
   }
 }
+
+.button-download {
+  max-width: 130px;
+  height: 35px;
+}
+
 
 .body--modal-opened .modal {
   opacity: 1;
@@ -92,7 +134,7 @@
 }
 
 
-/*========================================================================*/ 
+/*========================================================================*/
 
 .header {
   position: fixed;
@@ -195,7 +237,7 @@
   align-items: center;
   justify-content: end;
   margin: 0 auto;
-  background:linear-gradient(181deg, rgba(0, 0, 0, 0) 11.09%, #000 59.44%), linear-gradient(180deg, rgba(13, 13, 13, 0) 12.5%, rgba(13, 13, 13, 0) 23.51%, rgba(13, 13, 13, 0.81) 38.9%, #0d0d0d 43.76%, rgba(13, 13, 13, 0) 87.5%);
+  background: linear-gradient(181deg, rgba(0, 0, 0, 0) 11.09%, #000 59.44%), linear-gradient(180deg, rgba(13, 13, 13, 0) 12.5%, rgba(13, 13, 13, 0) 23.51%, rgba(13, 13, 13, 0.81) 38.9%, #0d0d0d 43.76%, rgba(13, 13, 13, 0) 87.5%);
   z-index: 7;
   padding-top: 130px;
   transform: translateY(100%);
@@ -248,7 +290,7 @@
 .instructions {
   position: relative;
   z-index: 1;
-  background-color:#000000;
+  background-color: #000000;
   margin-top: 450px;
 }
 
@@ -354,6 +396,7 @@
   opacity: .4;
   z-index: -1;
 }
+
 .download::after {
   content: "";
   background-image: url(../img/bg.png);
@@ -374,14 +417,16 @@
     justify-content: center;
     margin-top: 100px;
   }
+
   &__title {
     font-family: var(--second-family);
-  font-weight: 400;
-  font-size: 24px;
-  text-align: center;
-  color: #b8a46f;
-  margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #b8a46f;
+    margin-bottom: 50px;
   }
+
   &__img {
     margin-bottom: 65px;
   }
@@ -398,17 +443,22 @@
 
 .footer {
   z-index: 1;
+
   &__inner {
     padding: 180px 0 100px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
     z-index: 10;
-  }  
+  }
+
   &__item {
     @extend %text-header;
     padding: 10px;
+    max-width: 200px;
+    margin: 0 auto;
   }
+
   &__item:hover {
     color: var(--bg-text);
   }
