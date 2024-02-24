@@ -51,7 +51,6 @@
   z-index: 10;
   opacity: 0;
   visibility: hidden;
-  transition: all .5s;
 
   &__window {
     background-image: url(../img/bg-modal.png);
@@ -133,6 +132,41 @@
   visibility: visible;
 }
 
+.modal__window-progress {
+  display: none;
+}
+
+.modal__window-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-download--progress {
+  max-width: 130px;
+  height: 35px;
+  transform: translateY(30px);
+}
+
+.body__progress--open .modal__window-progress{
+  display: block;
+}
+.body__modal__window .modal__window--close{
+  display: none;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: var(--general-bg);
+  text-align: center;
+}
+
+#myBar {
+  width: 1%;
+  height: 10px;
+  border-radius: 36px;
+  background: linear-gradient(270deg, #8c602a 0%, #deae68 24.5%, #835925 48%, #e1b26e 73%, #bf9252 87.5%, #b18044 100%);
+}
 
 /*========================================================================*/
 
@@ -445,7 +479,7 @@
   z-index: 1;
 
   &__inner {
-    padding: 180px 0 100px;
+    padding: 140px 0 60px;
     display: flex;
     flex-direction: column;
     text-align: center;

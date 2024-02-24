@@ -18,9 +18,9 @@
 
     document.addEventListener('click', modalInit)
     function modalInit(e) {
-        const modalOpen = e.target.closest('.button-upload-photo')         
+        const modalOpen = e.target.closest('.button-upload-photo')
         const modal = e.target.classList.contains('modal')
-        if (!modalOpen && !modal) return
+        if (!modalOpen && !modal && !buttonClose) return
         if (!document.body.classList.contains('body--modal-opened') && e.target.closest('.button-upload-photo')) {
             document.body.classList.add('body--modal-opened')
         } else if (e.target && e.target.classList.contains('modal') && document.body.classList.contains('body--modal-opened')) {
@@ -33,4 +33,21 @@
             document.body.classList.remove('body--modal-opened')
         }
     }
+
+    document.addEventListener('click', modalwindow)
+    function modalwindow(e) {
+        const buttonClose = e.target.closest('.button-download')
+        const windowClose = e.target.closest('.modal__window--close')
+        const modal = e.target.classList.contains('modal')
+        if (!buttonClose && !modal) return
+        if (e.target && e.target.closest('.button-download')) {
+            document.body.classList.add('body__progress--open')   
+            document.body.classList.add('body__modal__window')   
+        }
+        if (e.target && e.target.classList.contains('modal')) {
+            document.body.classList.remove('body__progress--open')
+            document.body.classList.remove('body__modal__window')
+        }
+    }
+
 })()
