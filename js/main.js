@@ -43,10 +43,11 @@
         const modalCloseButton = e.target.closest('.modal__cancel')
         const modalClose = e.target.closest('.button-download')
         const modal = e.target.classList.contains('modal')
-        if (!modalOpen && !modal && !modalClose && !modalCloseButton) return
+        const modalWindowClose = e.target.classList.contains('modal__window-viewing')
+        if (!modalOpen && !modal && !modalClose && !modalCloseButton && !modalWindowClose) return
         if (!document.body.classList.contains('body--modal-opened') && e.target.closest('.button-viewing')) {
             document.body.classList.add('body--modal-opened')
-        } else if (e.target && e.target.closest('.button-download') || e.target.closest('.modal__cancel') || e.target && e.target.classList.contains('modal') && document.body.classList.contains('body--modal-opened')) {
+        } else if (e.target && e.target.classList.contains('modal__window-viewing') || e.target.closest('.button-download') || e.target.closest('.modal__cancel') || e.target && e.target.classList.contains('modal') && document.body.classList.contains('body--modal-opened')) {
             document.body.classList.remove('body--modal-opened')
         }
     }

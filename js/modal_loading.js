@@ -25,7 +25,7 @@
           i++;
           progressValue.textContent = i;
         }
-      }, 30); 
+      }, 0); 
       if (file) {
         showProgressModal();
         
