@@ -1153,6 +1153,9 @@ input[type=file] {
   .button-upload-btn {
     margin: 0 auto;
   }
+  .modal__viewing-img {
+    width: 75%;
+  }
   .hero__inner img {
     width: auto;
   }

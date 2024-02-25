@@ -133,6 +133,7 @@
 
 @media (max-width: 450px) {
 
+
   .modal {
     &__window {
       padding: 30px 15px 55px;
@@ -174,6 +175,11 @@
   .button-upload-btn {
     margin: 0 auto;
   }
+
+  .modal__viewing-img{
+    width: 75%;
+  }
+
 
 
   .hero {
