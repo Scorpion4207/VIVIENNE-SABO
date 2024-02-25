@@ -356,6 +356,11 @@ object-position: 0% 50%;
   height: 900px;
 }
 
+.page>img {
+  display: none;
+  padding-top: 31px;
+  width: 30px;
+}
 /*========================================================*/
 
 .instructions {
