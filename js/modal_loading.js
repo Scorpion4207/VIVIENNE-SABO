@@ -15,15 +15,26 @@
     fileInput.addEventListener('change', () => {
       const file = fileInput.files[0];
       modal.classList.add('hidden');
+      let progressValue = document.getElementById('progressValue');
+      let i = 0;
+      let interval = setInterval(function() {
+        if (i >= 100) {
+          clearInterval(interval);
+          modal.style.display = 'none';
+        } else {
+          i++;
+          progressValue.textContent = i;
+        }
+      }, 30); 
       if (file) {
         showProgressModal();
-    
+        
         let progress = 0;
         const interval = setInterval(() => {
             progressModal.classList.remove('hidden');
           progress += 5;
           progressBar.style.width = `${progress}%`;
-    
+          
           if (progress === 100) {
             clearInterval(interval);
             progressModal.classList.add('hidden');
