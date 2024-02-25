@@ -933,7 +933,7 @@ input[type=file] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 /*========================================================*/
