@@ -69,10 +69,23 @@
   }
   .hero__video video {
     width: 100%;
-    height: auto;
+    height: 700px;
     object-fit: contain;
   }
 
+  .instructions::before {
+    top: -100px;
+}
+
+  .instructions__inner {
+    padding-top: 30px;
+  }
+
+  .instructions__list{
+    padding: 0 15px;
+  }
+ 
+  
   .instructions__item {
     border: 0.50px solid #b39d63;
     background: transparent;
@@ -89,6 +102,50 @@
  
 }
 @media (max-width: 450px) {
+
+  .modal {
+    &__window {
+      padding: 30px 15px 55px;
+      margin: 0 15px 0;
+    } 
+  
+    &__body {
+      display: flex;
+      gap: 10px;
+    }
+  
+  
+    &__body-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    &__body-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+    }
+  
+    &__body-item {
+      @extend %text-header;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    &__body-item p {
+      transform: translateY(-3px);
+    }
+  }
+
+  .button-upload-btn {
+    margin: 0 auto;
+  }
+  
+
   .hero{
     &__inner img {
       width: auto;
@@ -98,28 +155,24 @@
     }
   }
 
-  .instructions::before {
-    content: "";
-    background-image: url(../img/bg-mobile.png);
-    position: absolute;
-    top: -350px;
-    height: 300px;
-    z-index: -1;
-    opacity: .4;
+  .hero__video video {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
   }
-  
-  .instructions::after {
-    content: "";
-    background-image: url(../img/bg-mobile.png);
-    position: absolute;
-    bottom: -300px;
-    left: 0;
-    right: 0;
-    height: 300px;
-    z-index: -1;
-    opacity: .4;
 
+
+
+
+
+  .instructions::before {
+    top: -200px;
+}
+
+  .instructions__inner {
+    padding-top: 0px;
   }
+
 
   .instructions__item {
     border: 0.50px solid #b39d63;
@@ -135,6 +188,22 @@
     position: relative;
   }
 
+
+  .ready__text {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .competition__text{
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+
+
+  .progress-bar {
+    width: 250px;
+  }
+
   .footer {
     &__inner {
       padding: 80px 0 100px;
@@ -144,4 +213,10 @@
     } 
   }
   
+}
+
+@media (max-width: 350px) {
+  .progress-bar {
+    width: 200px;
+  }
 }

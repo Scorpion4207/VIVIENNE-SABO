@@ -34,6 +34,32 @@
         }
     }
 
+
+    // ==================================Модалка просмотр фотографии============================
+
+    document.addEventListener('click', modalViewing)
+    function modalViewing(e) {
+        const modalOpen = e.target.closest('.button-viewing')
+        const modalCloseButton = e.target.closest('.modal__cancel')
+        const modalClose = e.target.closest('.button-download')
+        const modal = e.target.classList.contains('modal')
+        if (!modalOpen && !modal && !modalClose && !modalCloseButton) return
+        if (!document.body.classList.contains('body--modal-opened') && e.target.closest('.button-viewing')) {
+            document.body.classList.add('body--modal-opened')
+        } else if (e.target && e.target.closest('.button-download') || e.target.closest('.modal__cancel') || e.target && e.target.classList.contains('modal') && document.body.classList.contains('body--modal-opened')) {
+            document.body.classList.remove('body--modal-opened')
+        }
+    }
+    document.addEventListener('keydown', modalClose)
+    function modalClose(e) {
+        if (e.code === 'Escape' && document.body.classList.contains('body--modal-opened')) {
+            document.body.classList.remove('body--modal-opened')
+        }
+    }
+
+
+    // ==================================Модалка с загрузкой============================
+
     const uploadBtn = document.querySelector('.upload-btn');
     const fileInput = document.getElementById('file-input');
     const progressModal = document.querySelector('.progress-modal');
@@ -41,8 +67,7 @@
     const progressBar = document.querySelector('.progress');
     
     uploadBtn.addEventListener('click', () => {
-      fileInput.click();
-      
+      fileInput.click(); 
     });
     
     fileInput.addEventListener('change', () => {
@@ -54,7 +79,7 @@
         let progress = 0;
         const interval = setInterval(() => {
             progressModal.classList.remove('hidden');
-          progress += 20;
+          progress += 5;
           progressBar.style.width = `${progress}%`;
     
           if (progress === 100) {
@@ -63,9 +88,9 @@
 
             setTimeout(() => {
               window.location.href = "photo_ready.html";
-            }, 2000); // Через 2 секунды переход на другую страницу
+            }, 500); // Через 2 секунды переход на другую страницу
           }
-        }, 1000); // Промежуток между обновлениями прогресс-бара в миллисекундах
+        }, 150); // Промежуток между обновлениями прогресс-бара в миллисекундах
       }
     });
     
@@ -75,26 +100,6 @@
     }
     
 
-
-
-
-    // document.addEventListener('click', modalViewing)
-    // function modalViewing(e) {
-    //     const modalOpen = e.target.closest('.button-viewing')
-    //     const modal = e.target.classList.contains('modal')
-    //     if (!modalOpen && !modal) return
-    //     if (!document.body.classList.contains('body--modal-opened') && e.target.closest('.button-viewing')) {
-    //         document.body.classList.add('body--modal-opened')
-    //     } else if (e.target && e.target.classList.contains('modal') && document.body.classList.contains('body--modal-opened')) {
-    //         document.body.classList.remove('body--modal-opened')
-    //     }
-    // }
-    // document.addEventListener('keydown', modalClose)
-    // function modalClose(e) {
-    //     if (e.code === 'Escape' && document.body.classList.contains('body--modal-opened')) {
-    //         document.body.classList.remove('body--modal-opened')
-    //     }
-    // }
 
 
 })()
