@@ -378,7 +378,6 @@ html {
 }
 .modal__viewing-img > img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 0% 50%;
@@ -1161,7 +1160,10 @@ input[type=file] {
     margin: 0 auto;
   }
   .modal__viewing-img {
-    width: 75%;
+    width: 100%;
+  }
+  .modal__viewing-img img {
+    width: 100%;
   }
   .hero__inner img {
     width: auto;
